@@ -1,0 +1,42 @@
+<dialog class="inquiry" id="inquiry" aria-labelledby="inquiry-title">
+  <button type="button" class="inquiry-close" data-close-inquiry aria-label="Close enquiry form">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <div class="inquiry-panel" data-inquiry-panel>
+    <p class="eyebrow">Trade Enquiry</p>
+    <h2 id="inquiry-title">Send your enquiry</h2>
+    <p class="inquiry-lead">Share your name, email, contact number and message. We usually reply within a day.</p>
+    <form class="inquiry-form" id="inquiry-form" novalidate>
+      <div class="inquiry-field">
+        <label for="inquiry-name">Name</label>
+        <input id="inquiry-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+        <p class="inquiry-error" id="inquiry-name-error" role="alert" hidden></p>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-email">Email</label>
+        <input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+        <p class="inquiry-error" id="inquiry-email-error" role="alert" hidden></p>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-contact">Contact</label>
+        <input id="inquiry-contact" name="contact" type="tel" autocomplete="tel" maxlength="20" inputmode="tel" required>
+        <p class="inquiry-error" id="inquiry-contact-error" role="alert" hidden></p>
+      </div>
+      <div class="inquiry-field">
+        <label for="inquiry-message">Message</label>
+        <textarea id="inquiry-message" name="message" rows="4" maxlength="1000" required></textarea>
+        <p class="inquiry-error" id="inquiry-message-error" role="alert" hidden></p>
+      </div>
+      <button type="submit" class="btn btn-gold inquiry-submit">
+        Send enquiry
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </button>
+    </form>
+  </div>
+  <div class="inquiry-success" data-inquiry-success hidden>
+    <p class="eyebrow">Enquiry received</p>
+    <h2>Thank you</h2>
+    <p class="inquiry-lead">We have your details. The Seawyn team will get back to you soon.</p>
+    <button type="button" class="btn btn-navy" data-close-inquiry>Close</button>
+  </div>
+</dialog>
